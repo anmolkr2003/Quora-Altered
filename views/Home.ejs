@@ -9,12 +9,17 @@
 <body>
     <h1>Quora</h1>
     <% for (let post of posts) { %>
-        <div class="post">  
+        <div >  
             <h3 class="username">@<%= post.username %></h3>
-            <p class="content">@<%= post.content %></p>
-            
+            <p class="content"><%= post.content %></p>
+            <br>
+            <a href="http://localhost:3000/posts/<%= post.id %>">View Post</a>
+            <a href="http://localhost:3000/posts/<%= post.id %>/edit">Edit Post</a>
         </div>  
-    <%} %>
+        <%}%>
 
+    <br>
+    <br>
+    <a href="http://localhost:3000/posts/new">Create New Post</a>
 </body>
 </html>
